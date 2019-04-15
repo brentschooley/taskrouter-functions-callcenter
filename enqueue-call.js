@@ -8,7 +8,7 @@ exports.handler = function(context, event, callback) {
     language = 'es'
   }
   
-  twiml.enqueueTask({
+  twiml.enqueue({
     workflowSid: context.WORKFLOW_SID
   }).task({}, `{"selected_language":"${language}"}`);
   
